@@ -184,14 +184,23 @@ install.packages("lattice", repos="http://cran.rstudio.com/")
 ```
 
 ```
-## Error in install.packages : Updating loaded packages
+## Installing package into 'C:/Users/home/Documents/R/win-library/3.2'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'lattice' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\home\AppData\Local\Temp\RtmpoPTw36\downloaded_packages
 ```
 
 ```r
 library(lattice)
 stepsMean_per_interval2 <- aggregate(steps~interval + day,filled.theData, mean)
 xyplot(stepsMean_per_interval2$steps ~ stepsMean_per_interval2$interval|stepsMean_per_interval2$day,
-       main="Average_Steps_per Day /by Interval",xlab="5-minute Interval", ylab="Steps",layout=c(1,2), type="l")
+       main="Average_Steps_per Day /by Interval",
+       xlab="5-minute Interval", ylab="Steps",layout=c(1,2), type="l")
 ```
 
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
